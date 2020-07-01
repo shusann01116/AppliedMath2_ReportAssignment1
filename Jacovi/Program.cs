@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
-using System.Threading;
 
 namespace Jacovi {
     class Program {
@@ -20,7 +18,6 @@ namespace Jacovi {
                 new List<int[]>(),
             };
 
-            var rand = new Random(DateTime.Now.Second).Next();
             data = data.OrderBy(x => Guid.NewGuid()).ToList();
             dataset[0] = data.GetRange(0, data.Count / 2);
             dataset[1] = data.GetRange((int)Math.Ceiling(data.Count / 2.0), data.Count / 2);
